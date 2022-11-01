@@ -1,4 +1,4 @@
-import Component from "../core/Component";
+import Component from "../core/Component.js";
 
 export default class Items extends Component {
   setup () {
@@ -15,7 +15,7 @@ export default class Items extends Component {
   }
 
   setEvent () {
-    this.$target.querySelector('button').addEventListener('click', () => {
+    this.target.querySelector('button').addEventListener('click', () => {
       const { items } = this.state;
       this.setState({ items: [ ...items, `item${items.length + 1}` ] });
     });
